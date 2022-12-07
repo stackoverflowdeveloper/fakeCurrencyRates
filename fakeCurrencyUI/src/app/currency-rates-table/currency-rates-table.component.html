@@ -1,0 +1,11 @@
+
+<table class="table">
+  <thead>
+  <th *ngFor="let column of columns" class="table-cell">{{column}}</th>
+  </thead>
+  <tbody>
+<tr *ngFor="let currency of currencies$ | async" >
+  <td *ngFor="let column of columns" class="table-cell"> {{currency[column]}} </td>
+</tr>
+  </tbody>
+</table>
